@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 function page() {
   const [showEnquiry, setShowEnquiry] = useState(false);
-
+  const [width, setWidth] = useState(null);
   const handleToggle = () => {
     setShowEnquiry(!showEnquiry);
   };
@@ -19,6 +19,7 @@ function page() {
     const handleResize = () => {
       if (typeof window !== "undefined" && window.innerWidth >= 768) {
         setShowEnquiry(true);
+        setWidth(window.innerWidth);
       } else {
         setShowEnquiry(false);
       }
@@ -82,7 +83,7 @@ function page() {
               />
             </svg>
             <div className="mt-6 md:mt-0 md:pt-0 ">
-              {(showEnquiry || window.innerWidth >= 768) && (
+              {(showEnquiry || width >= 768) && (
                 <span className="ml-2 border border-[#17ABFF] md:border-0 rounded-md px-2 py-2 inline-block text-[#17ABFF] text-sm md:text-[12px]">
                   ENQUIRY NOW
                 </span>
