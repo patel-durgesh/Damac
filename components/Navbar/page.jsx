@@ -17,7 +17,7 @@ function page() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (document.window.innerWidth >= 768) {
         setShowEnquiry(true);
       } else {
         setShowEnquiry(false);
