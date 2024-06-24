@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Exterior from "../Exterior/page.jsx";
 import Interior from "../Interior/page.jsx";
